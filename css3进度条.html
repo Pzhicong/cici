@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.bar{
+				width:200px;
+				height:20px;
+				border:1px solid gray;
+			}
+			.bar .container{
+				height:100%;
+				width:100%;
+			}
+			.bar .container .inner{
+				width:100%;
+				height:100%;
+				background:red;
+				animation: myfirst 1.5s;
+				-webkit-animation: myfirst 1.5s;
+			}
+			@keyframes myfirst
+			{
+				0%   {width: 0px;}
+				100% {width: 100%;}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="title html5">HTML5</div>
+		<div class="bar">
+			<div class="container">
+				<div class="inner"></div>
+			</div>
+		</div>
+	</body>
+
+</html>

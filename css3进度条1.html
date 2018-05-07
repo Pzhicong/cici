@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body {
+  padding: 5%;
+}
+progress, progress::-webkit-progress-bar{
+    height:15px;
+    display:block;
+    background-color:#8e44ad;
+    width:0;
+    -webkit-border-radius: 8px;
+    border-radius:8px;
+    color: #fff;
+    -webkit-transition:width .8s ease;
+    -moz-transition:width .8s ease;
+    transition:width .8s ease;
+    -webkit-animation:progressbar 3s infinite;
+    animation:progressbar 3s infinite
+}
+
+progress::-moz-progress-bar {
+    height:15px;
+    display:block;
+    background-color:#8e44ad;
+    width:0;
+    -webkit-border-radius: 8px;
+    border-radius:8px;
+    color: #fff;
+    -webkit-transition:width .8s ease;
+    -moz-transition:width .8s ease;
+    transition:width .8s ease;
+    -webkit-animation:progressbar 2s infinite;
+    animation:progressbar 2s infinite
+}
+progress::-webkit-progress-bar{
+    height:15px;
+    display:block;
+    background-color:#8e44ad;
+    width:0;
+    -webkit-border-radius: 8px;
+    border-radius:8px;
+    color: #fff;
+    -webkit-transition:width .8s ease;
+    -moz-transition:width .8s ease;
+    transition:width .8s ease;
+    -webkit-animation:progressbar 2s infinite;
+    animation:progressbar 2s infinite
+}
+
+progress::-moz-progress-bar {
+    height:15px;
+    display:block;
+    background-color:#8e44ad;
+    width:0;
+    -webkit-border-radius: 8px;
+    border-radius:8px;
+    color: #fff;
+    -webkit-transition:width .8s ease;
+    -moz-transition:width .8s ease;
+    transition:width .8s ease;
+    -webkit-animation:progressbar 3s infinite;
+    animation:progressbar 3s infinite
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes progressbar { 
+    from {
+        width:0
+    }
+    to {
+        width:100%
+    }
+}
+/* Standard syntax */
+@keyframes progressbar {
+    from {
+        width:0
+    }
+    to {
+        width:100%
+    }
+}
+		</style>
+	</head>
+	<body>
+		<div class="title html5">HTML5</div>
+		<div class="bar">
+		    <span class="bar-unfill">
+		        <progress value="50" max="100"></progress>
+		    </span>
+		</div>
+	</body>
+</html>
