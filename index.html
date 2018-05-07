@@ -23,7 +23,11 @@
   
   <link rel="stylesheet" href="/css/style.css">
   
-
+  <script>
+    if (document.body.scrollTop + window.innerHeight >= document.body.scrollHeight) {
+      isAllowLoadMore = true;
+    }
+  </script>
 </head>
 
 <body>
