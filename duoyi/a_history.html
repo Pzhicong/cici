@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>战盟 Android 更新记录</title>
+    <link rel="stylesheet" href="css/style_history.min.css">
+</head>
+
+<body>
+    <div id="banner">
+        <span id="bs1"></span>
+        <a href="http://im.2980.com:30816/cc/ccplayerand/yiwang.apk">点击更新</a>
+        <span id="bs3">x</span>
+    </div>
+    <div id="container">
+        <div class="title">战盟 Android</div>
+    </div>
+    <script src="js/script_history.min.js"></script>
+    <script type="text/javascript">
+    addContents([{
+        version: "1.0.7",
+        date: "2016.02.26",
+        news: [
+        	"<em>&quot;益网&quot;正式更名为&quot;战盟&quot;</em>"
+        ],
+        optimizations: [
+        	"部分界面和控件的样式美化"
+        ],
+        bugs: [
+        	"修复预览图片时可能导致程序崩溃的问题",
+        	"修复盟友圈发布动态时可能导致程序崩溃的问题",
+        	"其他问题修复"
+        ]
+    }, {
+        version: "1.0.6",
+        date: "2016.02.02",
+        news: [
+        	"相册：分享和管理照片",
+        	"帮派圈：与同帮派中的角色亲密互动"
+        ],
+        optimizations: [
+            "添加入群时满人的提示"
+        ]
+    }, {
+        version: "1.0.4",
+        date: "2015.12.31",
+        news: [
+            "益网圈：你可以随时随地跟好友分享游戏和生活中的新鲜事",
+            "隐私设置和黑名单",
+            "草稿箱：保存发送失败的动态",
+            "通过昵称查找并添加好友",
+            "邮箱注册和找回密码",
+            "吉祥表情：能够收发神武2端游中的吉祥表情",
+            "可以选择要接收讨论组消息的客户端"
+        ],
+        optimizations: [
+            "网络连接：弱网环境下也能快速登录"
+        ],
+        bugs: [
+            "无法显示自己当前游戏信息的问题",
+            "解算群时可能导致程序崩溃的问题",
+            "偶尔无法显示帮派聊天中图片"
+        ]
+    }, {
+        version: "1.0.3",
+        date: "2016.10.28",
+        news: [
+            "你能够跟游戏里面的益网好友随时随地聊天，文字、表情、图片、网址和语音都支持",
+            "语音消息能够转为文字，2分钟内的语音消息可以撤回",
+            "你可以通过益网号或者邮箱来搜索并添加好友",
+            "你可以创建益网群，其他的游戏玩家能够看到并加入你的群,与大家一起畅聊游戏的欢乐",
+            "你可以创建讨论组并邀请好友一起聊天",
+            "益网游戏帮派与游戏帮派频道互相同步，你不在游戏时也能在帮派里聊天"
+        ]
+    }]);
+  /*统计pv*/
+    function getXMLHttpRequest() {
+        var xhr;
+        if(window.ActiveXObject) {
+            xhr= new ActiveXObject('Microsoft.XMLHTTP');
+        }else if (window.XMLHttpRequest) {
+            xhr= new XMLHttpRequest();
+        }else {
+            xhr= null;
+        }
+        return xhr;
+    }
+    var xhr = getXMLHttpRequest();
+    xhr.open('post', '/dyq/api/common/recordPV');
+    var data = 'platform: 1';
+    xhr.send(data);
+    xhr.onreadystatechange= function() {
+        if(xhr.readyState == 4 && xhr.status == 200) {
+//                alert("returned:"+ xhr.responseText);
+        }
+    };
+    </script>
+</body>
+
+</html>

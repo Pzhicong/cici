@@ -1,0 +1,63 @@
+html, body, div, ol, li, a{
+    padding: 0;
+    margin: 0;
+}
+a{text-decoration: none;}
+body {
+    font-family: Tahoma, Arial, Roboto, "Droid Sans", "Helvetica Neue", "Droid Sans Fallback", "Heiti SC", sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+#banner {
+    margin: 0.5em auto 0 auto;
+    padding: 0.3em;
+    width: 90%;
+    height: 24px;
+    display: none;
+    z-index: 99;
+    border-radius: 4px;
+    background-color: #ccc;
+    line-height: 24px;
+}
+#banner a{
+    margin-left: 1em;
+}
+#bs3{
+    float: right;
+    margin-right: 0.2em;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    background-color: red;
+}
+#container {
+    margin-left: 2%;
+    width: 96%;
+}
+.title {
+    font-size: 2em;
+    margin: 0.5em auto;
+    font-weight: bold;
+}
+.v {
+    margin-bottom: 2em;
+}
+.version {
+    font-size: 1.5em;
+}
+.date {
+    color: #666666;
+    margin-left: 1.5em;
+    font-size: 0.6em;
+}
+.item {
+    line-height: 1.5em;
+    margin-left: 2em;
+}
+.desc {
+    color: rgb(5, 92, 159);
+    margin-top: 0.2em;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="战盟-做一辈子的战友">
+    <meta name="keywords" content="战盟 益网 神武 梦想世界 多益">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="app-mobile-web-app-capable" content="yes">
+    <meta name="app-mobile-web-app-status-bar-style" content="blank">
+    <meta name="format-detection" content="telephone=no">
+    <title>战盟 App - 下载</title>
+    <link href="css/dp_style_modify.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        /*location.href = 'http://dygame.duoyi.com/m/dp.html'*/
+        var _gaq = _gaq || [],_hmt = _hmt || [];
+        (function()
+        {
+            //链接换成对应游戏的首字母
+            var script = document.createElement("script"),elem = document.getElementsByTagName('script')[0];script.type = "text/javascript";script.src = "//image.duoyi.com/dygame/js/dygame_count.js";script.async = true;elem.parentNode.insertBefore(script, elem);
+        })();
+    </script>
+</head>
+
+<body onselectstart="return false">
+    <div id="pageContain">
+        <div class="page current">
+            <div class="contain">
+                <div class="ls">
+                    <div>
+                        <p class="lm"></p>
+                    </div>
+                    <div class="slogen"></div>
+                </div>
+                <a id="dbtn1" class="d"></a>
+                <span class="icon-up"></span>
+            </div>
+        </div>
+        <div class="page">
+            <div class="contain">
+                <div class="top tOne"></div>
+                <div class="bottom bOne"></div>
+            </div>
+            <span class="icon-up"></span>
+        </div>
+        <div class="page">
+            <div class="contain">
+                <div class="top tTwo"></div>
+                <div class="bottom bTwo"></div>
+            </div>
+            <span class="icon-up"></span>
+        </div>
+        <div class="page">
+            <div class="contain">
+                <div class="top tThree"></div>
+                <div class="bottom bThree"></div>
+            </div>
+            <span class="icon-up"></span>
+        </div>
+        <div class="page">
+            <div class="contain">
+                <div class="ls">
+                    <div>
+                        <p class="lm"></p>
+                    </div>
+                    <div class="slogen"></div>
+                </div>
+                <a id="dbtn2" class="d"></a>
+                <p class="right">©2017 多益网络. All Rights Reserved ICP粤B2-20060723</p>
+            </div>
+        </div>
+    </div>
+    <ul id="navBar">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <div id="fullCover">
+        <div id="cover">
+        	<div id="banner">
+                <p>如果你正在使用微信：</p>
+                <p>请点击右上角三个点的按钮</p>
+                <p id="outerBrowser"></p>
+            </div>
+        	<div id="arrow"></div>
+        </div>
+    </div>
+    <script src="js/fullPage.min.js"></script>
+    <script src="js/dp_script.min.js"></script>
+    <script>
+        function getXMLHttpRequest() {
+            var xhr;
+            if(window.ActiveXObject) {
+                xhr= new ActiveXObject('Microsoft.XMLHTTP');
+            }else if (window.XMLHttpRequest) {
+                xhr= new XMLHttpRequest();
+            }else {
+                xhr= null;
+            }
+            return xhr;
+        }
+        var xhr = getXMLHttpRequest();
+        xhr.open('post', '/dyq/api/common/recordPV');
+        var data = 'platform: 1';
+        xhr.send(data);
+        xhr.onreadystatechange= function() {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+//                alert("returned:"+ xhr.responseText);
+            }
+        };
+    </script>
+
+</body>
+
+</html>

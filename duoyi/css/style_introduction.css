@@ -1,0 +1,30 @@
+body{
+    background-color:#fff;
+    font-size:1.2em;
+    padding:0;
+    margin:0;
+}
+div#container{
+    width:92%;
+    max-width:480px;
+    margin-left:4%;
+}
+div#container h3{
+    padding:0;
+    margin:2% 0;    
+}
+div#container div.item_div{
+    margin-bottom:2em;
+}
+div#container p.text_p{
+    margin:0 0 0.5em 0;
+}
+div#container div.img_div{
+    width:92%;
+    margin:0 auto;
+    /*border:1px solid #999;*/
+}
+div.img_div img{
+    width:100%;
+    height:auto;
+}

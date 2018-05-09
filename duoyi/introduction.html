@@ -1,0 +1,88 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>功能介绍</title>
+    <link rel="stylesheet" href="css/style_introduction.css"></head>
+<body>
+<img src ="img/introduction.jpg" style="width:100%;display:none;" id="introPic">
+<div id="container"  style="display:none;">
+    <div>
+        <h3 id="zmVersion">战盟 1.0.0</h3>
+        <div class="item_div">
+            <p class="text_p">随时随地与游戏内外的好友畅聊，你可以发送文字、表情、图片、语音等消息</p>
+            <div class="img_div">
+                <img src="img/yw/1.png"></div>
+        </div>
+        <div class="item_div">
+            <p class="text_p">帮派聊天会和游戏帮派频道相互同步</p>
+            <div class="img_div">
+                <img src="img/yw/2.png"></div>
+        </div>
+        <div class="item_div">
+            <p class="text_p">可以收发语音消息并转换为文字</p>
+            <div class="img_div">
+                <img src="img/yw/3.png"></div>
+        </div>
+        <div class="item_div">
+            <p class="text_p">多人聊天中可以通过@来提醒其他成员</p>
+            <div class="img_div">
+                <img src="img/yw/4.png"></div>
+        </div>
+    </div>
+</div>
+<script>
+    /*统计pv*/
+    function getXMLHttpRequest() {
+        var xhr;
+        if(window.ActiveXObject) {
+            xhr= new ActiveXObject('Microsoft.XMLHTTP');
+        }else if (window.XMLHttpRequest) {
+            xhr= new XMLHttpRequest();
+        }else {
+            xhr= null;
+        }
+        return xhr;
+    }
+    var xhr = getXMLHttpRequest();
+    xhr.open('post', '/dyq/api/common/recordPV');
+    var data = 'platform: 1';
+    xhr.send(data);
+    xhr.onreadystatechange= function() {
+        if(xhr.readyState == 4 && xhr.status == 200) {
+//                alert("returned:"+ xhr.responseText);
+        }
+    };
+
+    function getUrlParameter(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null)
+            return unescape(decodeURIComponent(r[2]));
+        return null;
+    };
+    var version = getUrlParameter('version');
+    if(version) {
+        if(version.indexOf('1.2') == 0) {
+            document.getElementById('introPic').style.display = 'inline';
+        } else {
+            document.getElementById('container').style.display = 'block';
+            document.getElementById('zmVersion').innerHTML = '战盟 ' + version;
+        }
+
+    } else {
+        document.getElementById('container').style.display = 'block';
+    }
+
+    /*if (version.indexOf('1.2') == 0) {
+        document.getElementById('introPic').style.display = 'inline';
+    } else {
+        document.getElementById('container').style.display = 'block';
+        if (version) {
+            document.getElementById('zmVersion').innerHTML = '战盟 ' + version;
+        }
+    }*/
+
+</script>
+</body>
+</html>

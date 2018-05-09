@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>战盟 iOS 更新记录</title>
+    <link rel="stylesheet" href="css/style_history.min.css">
+</head>
+
+<body>
+    <div id="banner">
+        <span id="bs1"></span>
+        <a href="https://itunes.apple.com/cn/app/yi-wang-lian-jie-you-xi-nei-wai/id1015325531?l=cn&mt=8">点击更新</a>
+        <span id="bs3">x</span>
+    </div>
+    <div id="container">
+        <div class="title">战盟 iOS</div>
+    </div>
+		<script src="js/script_history.min.js"></script>
+    <script type="text/javascript">
+    addContents([{
+        "version": "1.0.7",
+        "date": "2016.02.23",
+        "news": [
+            "<em>&quot;益网&quot;正式更名为&quot;战盟&quot;</em>",
+        	"本地缓存盟友圈动态，改善弱网环境下的阅览体验",
+        	"邮箱注册和登录时，增加常用邮箱补全提示",
+        	"小昕智能机器人",
+        	"自定义表情",
+        	"快速发图：提示是否发送 30 秒内系统新增的图片",
+        	"内置浏览器打开网页后，能够分享给好友或者盟友圈",
+        	"iPad iOS 9，支持多任务的特性"
+        ],
+        "optimizations": [
+        	"改进网络请求策略，更节省流量",
+        	"预览相册中的照片时，能够查看照片描述，也能进行评论和点赞操作",
+        	"聊天设置界面中进入到聊天图片页面后，也能定位到对应的消息记录",
+        	"动态屏蔽的列表页上增加屏蔽入口",
+        	"限制发布空白的动态内容"
+        ],
+        "bugs": [
+            "修复相册查看权限的问题",
+            "修复不能移动和删除相册中照片的问题",
+            "修复不能置顶空聊天对象的问题",
+            "修复聊天窗中获取到 gif 后不播放的问题",
+            "修复同时收发2个及以上猜拳或骰子表情时动画不能停止的问题"
+        ]
+    }, {
+        "version": "1.0.5",
+        "date": "2016.01.11",
+        "news": [
+            "益网圈相册：分享和管理照片",
+            "聊天图片：从图片快速定位到对应的消息记录",
+            "扫一扫与二维码：扫描或长按识别二维码，快速添加好友或申请入群",
+            "帮派圈：与同帮派中的角色亲密互动",
+            "邮箱注册和找回密码",
+            "吉祥表情：能够收发神武2端游中的吉祥表情"
+        ],
+        "optimizations": [
+            "益网圈消息通知和草稿箱",
+            "游戏物品：接收到的游戏物品显示更美观",
+            "网络连接：弱网环境下也能快速登录",
+            "帮派角色：通过角色直接添加益网好友"
+        ],
+        "bugs": [
+            "若干可能导致程序闪退的问题",
+            "益网圈中@同名的人时无法识别的问题",
+            "帮派公告中表情无法显示的问题",
+            "转发动态后不显示中间层的问题"
+        ]
+    }, {
+        "version": "1.0.4",
+        "date": "2015.12.07",
+        "news": [
+            "新增益网圈功能，你可以随时随地跟好友分享游戏和生活中的新鲜事",
+            "益网圈动态详情界面上你可以屏蔽该好友的动态，也可以举报不良信息",
+            "新增好友推荐功能，你也可以通过昵称来搜索并添加好友",
+            "多端在线时，你可以选择手机端是否需要消息提醒",
+            "你可以查看历史帮派公告和群公告，有新的公告内容时会在聊天窗中提示你",
+            "新增隐私设置和黑名单功能",
+            "你可以选择要接收讨论组消息的客户端",
+            "你可以保存gif格式的图片到本地，并从本地选择gif格式的图片发送给好友或者分享到益网圈"
+        ]
+    }, {
+        "version": "1.0.3",
+        "date": "2015.10.09",
+        "news": [
+            "使用新版表情，聊天更有趣",
+            "主界面结构调整",
+            "在线修改密码后自动退出登录"
+        ],
+        "bugs": [
+            "已知bug修复，性能提升"
+        ]
+    }, {
+        "version": "1.0.1",
+        "date": "2015.08.05",
+        "news": [
+            "你能够跟游戏里面的益网好友随时随地聊天，文字、表情、图片、网址和语音都支持",
+            "语音消息能够转为文字，2分钟内的语音消息可以撤回",
+            "你可以通过益网号或者邮箱来搜索并添加好友",
+            "你可以创建益网群，其他的游戏玩家能够看到并加入你的群,与大家一起畅聊游戏的欢乐",
+            "你可以创建讨论组并邀请好友一起聊天",
+            "益网游戏帮派与游戏帮派频道互相同步，你不在游戏时也能在帮派里聊天"
+        ]
+    }]);
+
+    /*统计pv*/
+    function getXMLHttpRequest() {
+        var xhr;
+        if(window.ActiveXObject) {
+            xhr= new ActiveXObject('Microsoft.XMLHTTP');
+        }else if (window.XMLHttpRequest) {
+            xhr= new XMLHttpRequest();
+        }else {
+            xhr= null;
+        }
+        return xhr;
+    }
+    var xhr = getXMLHttpRequest();
+    xhr.open('post', '/dyq/api/common/recordPV');
+    var data = 'platform: 1';
+    xhr.send(data);
+    xhr.onreadystatechange= function() {
+        if(xhr.readyState == 4 && xhr.status == 200) {
+//                alert("returned:"+ xhr.responseText);
+        }
+    };
+    </script>
+</body>
+
+</html>
